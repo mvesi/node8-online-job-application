@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Applicant List
+
+    ul
+      for applicant in applicants
+        li
+          strong= applicant.name
+          | &nbsp;
+          em is a developer with the following skills: #{applicant.skills}
+          | &nbsp;
+          a(href="/delete/#{applicant._id}") Delete applicant

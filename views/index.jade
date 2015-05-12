@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 Wanted: Badass Web Developers!
+
+    form(name="job-app", action="/success", method="post")
+        input(type="text", name="name", placeholder="enter name")
+        input(type="text", name="skills", placeholder="what skillz do you have?")
+        input(type="submit", value="submit")
